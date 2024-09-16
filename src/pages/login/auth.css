@@ -1,0 +1,192 @@
+.section__auth {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-color);
+}
+
+.auth__container {
+    height: auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.auth__content {
+    display: block;
+    background-image: var(--image-hexa);
+    height: 600px;
+    width: 450px;
+}
+
+.auth__content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.auth__content-title {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--background);
+    top: 1rem;
+    left: 1rem;
+}
+
+.auth__content-subtitle {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    color: var(--background);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+}
+
+.auth__content-span {
+    font-size: var(--small-font-size);
+}
+
+.auth__message {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 450px;
+}
+
+.color-theme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--primary);
+    font-size: var(--h3-font-size);
+    transition: .3s;
+}
+
+.color-theme-icon {
+    transition: .3s;
+}
+
+.color-theme:hover .color-theme-icon {
+    color: var(--secondary);
+}
+
+.color-theme:active .color-theme-icon {
+    transform: rotate(360deg);
+}
+
+.auth__enter {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--secondary);
+    font-size: .9rem;
+    font-weight: var(--font-medium);
+}
+
+.auth__massage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3.5rem;
+}
+
+.auth__title {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.section__massage-subtitle {
+    color: var(--secondary);
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: var(--mb-1-5);
+}
+
+.auth__form-content {
+    position: relative;
+}
+
+
+.auth__label {
+    position: absolute;
+    color: var(--secondary);
+    background-color: var(--background);
+    font-size: var(--small-font-size);
+    padding: 0 .3rem;
+    left: 1rem;
+    top: -.6rem;
+    z-index: 10;
+}
+
+.auht__input {
+    outline: none;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.auth__form-massage {
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    color: var(--secondary);
+}
+
+.auth__massage-span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.auth__massage-span:hover {
+    color: var(--primary);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .auth__content {
+        height: 450px;
+        width: 350px;
+    }
+
+    .auth__message {
+        height: 450px;
+        width: 350px;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .auth__content {
+        display: none;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .auth__message {
+        height: auto;
+        width: 330px;
+    }
+
+    .auth__title {
+        margin-bottom: var(--mb-1-5);
+    }
+}

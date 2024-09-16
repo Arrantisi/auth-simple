@@ -1,0 +1,121 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.main__tap {
+    position: absolute;
+    font-size: 1rem;
+    opacity: 0;
+    color: var(--primary);
+    bottom: -40%;
+    padding: .3rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+}
+
+.main__button-icon {
+    transform: rotate(45deg);
+    margin-left: .5rem;
+    transition: .3s;
+}
+
+.main__button:hover .main__button-icon {
+    transform: rotate(90deg);
+}
+
+.main__button:active .main__button-icon {
+    transform: translateX(1rem) rotate(90deg);
+}
+
+.main__tap:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--border-color) transparent transparent transparent;
+    transform: rotate(180deg);
+}
+
+.main__button:hover .main__tap {
+    opacity: 1;
+}
+
+.main__button-subtitle {
+    position: absolute;
+    bottom: 30px;
+    opacity: 0;
+    background-color: var(--button-hover-color);
+    color: var(--background);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    transition: .3s;
+}
+
+.show-button-subtitle {
+    opacity: 1;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
