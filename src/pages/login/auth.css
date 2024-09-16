@@ -162,12 +162,12 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
     .auth__content {
-        height: 450px;
+        height: 550px;
         width: 350px;
     }
 
     .auth__message {
-        height: 450px;
+        height: 550px;
         width: 350px;
     }
 }
