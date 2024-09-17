@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../../styles/auth.css"
 import Input from "../../Elements/Input"
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const FormRegister = () => {
     const navigate = useNavigate()
