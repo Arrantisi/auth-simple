@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
-import "./main.css"
+import React, { useEffect, useState } from 'react'
+import "../../styles/main.css"
 import { FaAirbnb } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 
 const Main = () => {
     const [snackbar, setSnackbar] = useState(true)
+    useEffect(() => {
+        localStorage.removeItem("name");
+        localStorage.removeItem('email');
+        localStorage.removeItem("password")
+    }, [])
+
 
     const toggleSnackbar = () => {
         setSnackbar(!snackbar);
@@ -14,12 +20,13 @@ const Main = () => {
         }, 2000);
     }
 
+
     return (
         <div className='main'>
             <div className="main__container ">
                 <h1 className="main__title ">pres to change the theme</h1>
 
-                <Link to={"/login"} className='main__button button button--flex' onClick={() => { toggleSnackbar() }}>
+                <Link to={"/login"} className='main__button button button--flex' onClick={() => { toggleSnackbar }}>
                     Login<i className="main__button-icon button-icon"><FaAirbnb /></i>
                     <p className='main__tap'>tap</p>
                 </Link>

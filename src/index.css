@@ -175,7 +175,7 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-    max-width: 968px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -202,6 +202,7 @@ img {
 .button--flex {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
 }
 
 /*=============== react-icons ===============*/
