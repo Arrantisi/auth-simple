@@ -145,6 +145,8 @@ button {
     cursor: pointer;
     border: none;
     outline: none;
+    background-color: transparent;
+    color: var(--background);
 }
 
 img {

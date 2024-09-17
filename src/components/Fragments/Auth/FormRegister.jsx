@@ -1,8 +1,11 @@
 import React from 'react'
 import "../../../styles/auth.css"
 import Input from "../../Elements/Input"
+import { Link, useNavigate } from 'react-router-dom'
 
 const FormRegister = () => {
+    const navigate = useNavigate()
+
     const toggleSubmit = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -19,9 +22,7 @@ const FormRegister = () => {
         localStorage.setItem("email", email);
         localStorage.setItem("password", password);
 
-        const baseUrl = import.meta.env.BASE_URL.replace(/\/+$/, ''); // Hapus trailing slash
-        const loginUrl = `${baseUrl}/login`; // Tambahkan slash sebelum 'login'
-        window.location.href = loginUrl;
+        navigate("/login")
     }
 
 
@@ -31,7 +32,7 @@ const FormRegister = () => {
             <Input name={"email"} label={"Email"} placeholder={"example@gmail.com"} type={"email"} />
             <Input name={"password"} label={"Password"} placeholder={"*******"} type={"password"} />
             <Input name={"checkPassword"} label={"Check Password"} placeholder={"*******"} type={"password"} />
-            <button type='submit' className=' button button--flex'>Login</button>
+            <button type='submit' className=' button button--flex'>Register</button>
         </form>
     )
 }

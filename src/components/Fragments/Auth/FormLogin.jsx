@@ -1,8 +1,10 @@
 import React from 'react'
 import "../../../styles/auth.css"
 import Input from "../../Elements/Input"
+import { useNavigate } from 'react-router-dom'
 
 const FormLogin = () => {
+    const navigate = useNavigate()
 
     const toggleSubmit = (e) => {
         e.preventDefault();
@@ -19,10 +21,9 @@ const FormLogin = () => {
 
         localStorage.setItem("name", name);
         localStorage.setItem("email", email)
+        localStorage.removeItem("password")
 
-        const baseUrl = import.meta.env.BASE_URL.replace(/\/+$/, ''); // Hapus trailing slash
-        const dashboardUrl = `${baseUrl}/dashboard`; // Tambahkan slash sebelum 'login'
-        window.location.href = dashboardUrl;
+        navigate("/dashboard")
     }
 
     return (
