@@ -2,10 +2,11 @@ import { AiOutlineBarChart, AiOutlineFileText, AiOutlineLogout, AiOutlineMail, A
 import { BsFillImageFill, BsPerson, BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
 import { RxDashboard } from "react-icons/rx";
 
-export const menu = [
+export const sidebarMenu = [
     { title: "Dashboard", icon: <RxDashboard /> },
     { title: "Pages", icon: <AiOutlineFileText /> },
     { title: "Mendia", icon: <BsFillImageFill />, spacing: true },
+    { title: "Analisytics", icon: <AiOutlineBarChart /> },
     {
         title: "Project",
         icon: <BsReverseLayoutTextSidebarReverse />,
@@ -16,9 +17,11 @@ export const menu = [
             { title: "Submenu 3" }
         ]
     },
-    { title: "Analisytics", icon: <AiOutlineBarChart /> },
     { title: "Inbox", icon: <AiOutlineMail /> },
-    { title: "Profile", icon: <BsPerson />, spacing: true },
+    { title: "Profile", icon: <BsPerson />, spacing: true }
+]
+
+export const sidebarSet = [
     { title: "Setting", icon: <AiOutlineSetting /> },
     { title: "Logout", icon: <AiOutlineLogout /> }
 ]
